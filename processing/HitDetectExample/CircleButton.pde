@@ -5,7 +5,7 @@ class CircleButton extends Button {
   }
   
   void update() {
-    hovered = hitDetect(mouseX, mouseY, 1, p.x, p.y, s.x);
+    hovered = hitDetectCircle(mouseX, mouseY, 1, p.x, p.y, s.x);
     super.update();
   }
   
@@ -15,4 +15,15 @@ class CircleButton extends Button {
     ellipse(p.x, p.y, s.x, s.y);
   }
   
+  // 2D CIRCLE hit detect: xy, diameter of object 1; xy, diameter of object 2; assumes center.
+  boolean hitDetectCircle(float x1, float y1, float d1, float x2, float y2, float d2) {
+    d1 /= 2;
+    d2 /= 2;
+    if (dist(x1, y1, x2, y2) < d1 + d2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+    
 }

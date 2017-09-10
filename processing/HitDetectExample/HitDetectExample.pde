@@ -5,7 +5,6 @@ ImageButton imageButton;
 
 void setup() {
   size(600,300,P2D);
-  smooth();
   
   circleButton = new CircleButton(100, height/2, 100);
   squareButton = new SquareButton(300, height/2, 100);
