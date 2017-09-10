@@ -27,11 +27,13 @@ boolean hitDetect(float x1, float y1, float d1, float x2, float y2, float d2) {
 }
 
 // 2D IMAGE hit detect: xy of object 1; xy, wh of object 2; assumes center.
-boolean hitDetect(float x1, float y1, float x2, float y2, float w2, float h2, PImage img) {
-  if (hitDetect(x1, y1, 1, 1, x2, y2, w2, h2)) {
-    int loc = int(x1 + (y1 * img.width));
+boolean hitDetect(float x1, float y1, float x2, float y2, PImage img) {
+  if (hitDetect(x1, y1, 1, 1, x2, y2, img.width, img.height)) {
+    int xLoc = constrain(int((x1 - x2) + (img.width/2)), 0, img.width-1);
+    int yLoc = constrain(int((y1 - y2) + (img.height/2)), 0, img.height-1);
+    int loc = int(xLoc + (yLoc * img.width));
     color c = img.pixels[loc];
-    if (alpha(c) > 10) {
+    if (alpha(c) > 0) {
       return true;
     } else {
       return false;
