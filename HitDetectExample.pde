@@ -4,7 +4,7 @@ PImage img;
 ImageButton imageButton;
 
 void setup() {
-  size(640,480,P2D);
+  size(600,300,P2D);
   smooth();
   
   circleButton = new CircleButton(100, height/2, 100);
