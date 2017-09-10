@@ -1,4 +1,4 @@
-class Button extends HitDetector {
+class Button {
   
   boolean clicked = false;
   boolean hovered = false;
@@ -9,7 +9,7 @@ class Button extends HitDetector {
   color currentColor = offColor;
   
   Button() {
-    super();
+    //
   }
   
   void update() {
