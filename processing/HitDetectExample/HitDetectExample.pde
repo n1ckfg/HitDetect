@@ -8,7 +8,7 @@ void setup() {
   
   circleButton = new CircleButton(100, height/2, 100);
   squareButton = new SquareButton(300, height/2, 100);
-  img = loadImage("potter.png");
+  img = loadImage("pikachu.png");
   imageButton = new ImageButton(500, height/2, img);
 }
 

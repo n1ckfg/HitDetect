@@ -6,7 +6,7 @@ var img;
 var imageButton;
 
 function preload() {
-	img = loadImage("./images/potter.png");
+	img = loadImage("./images/pikachu.png");
 }
 
 function setup() {
